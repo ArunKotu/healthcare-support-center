@@ -9,8 +9,7 @@
 | | |
 |---|---|
 | **Live Demo** | `https://healthcare-support-center.vercel.app` ← *replace with your deployed URL* |
-| **GitHub Repo** | `https://github.com/your-username/healthcare-support-app` ← *replace with your repo URL* |
-| **Google Drive** | `https://drive.google.com/...` ← *replace with your Drive link if required* |
+| **GitHub Repo** | `https://github.com/ArunKotu/healthcare-support-center`|
 
 ---
 
