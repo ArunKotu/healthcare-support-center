@@ -1,0 +1,106 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f7f9;
+  color: #1a1a1a;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.logo { width: 36px; height: 36px; border-radius: 8px; background: #1D9E75; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0; }
+.app-title { font-size: 18px; font-weight: 600; color: #1a1a1a; }
+.app-subtitle { font-size: 13px; color: #666; margin-top: 2px; }
+
+/* Tabs */
+.tab-switcher { display: flex; gap: 4px; background: #e8ebee; padding: 4px; border-radius: 10px; margin-bottom: 16px; }
+.tab-btn { flex: 1; padding: 7px 4px; border: none; border-radius: 7px; font-size: 12px; font-weight: 400; background: transparent; color: #666; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px; transition: all 0.15s; }
+.tab-btn.active { background: #fff; color: #1a1a1a; font-weight: 500; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.tab-icon { font-size: 10px; }
+.ai-badge { background: #E1F5EE; color: #0F6E56; font-size: 10px; font-weight: 500; padding: 1px 6px; border-radius: 20px; }
+
+/* Main card */
+.card { background: #fff; border: 1px solid #e5e7ea; border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; }
+.card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #f0f0f0; }
+.card-icon { font-size: 18px; }
+.card-title { font-size: 15px; font-weight: 500; }
+.card-subtitle { font-size: 12px; color: #888; margin-top: 2px; }
+
+/* Form fields */
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 13px; font-weight: 500; color: #555; margin-bottom: 5px; }
+.req { color: #D85A30; margin-left: 2px; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 9px 12px; border: 1px solid #dde1e5;
+  border-radius: 8px; font-size: 14px; font-family: inherit;
+  color: #1a1a1a; background: #fff; outline: none; transition: border-color 0.15s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #1D9E75; }
+.field textarea { resize: vertical; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.form-desc { font-size: 13px; color: #666; margin-bottom: 18px; line-height: 1.6; }
+.info-banner { background: #E1F5EE; border-radius: 8px; padding: 10px 14px; margin-bottom: 18px; font-size: 13px; color: #0F6E56; line-height: 1.5; }
+.contact-info { font-size: 12px; color: #777; margin-bottom: 16px; }
+
+/* Submit button */
+.submit-btn {
+  background: #1D9E75; color: #fff; border: none; border-radius: 8px;
+  padding: 10px 24px; font-size: 14px; font-weight: 500; cursor: pointer;
+  transition: opacity 0.2s;
+}
+.submit-btn:hover { opacity: 0.88; }
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Success card */
+.success-card { text-align: center; padding: 40px 24px; }
+.success-icon { width: 56px; height: 56px; border-radius: 50%; background: #E1F5EE; color: #1D9E75; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 22px; font-weight: 700; }
+.success-title { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+.success-msg { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+.reset-link { font-size: 13px; color: #1D9E75; background: none; border: none; cursor: pointer; text-decoration: underline; }
+
+/* Chatbot */
+.chat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.api-toggle { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #888; cursor: pointer; }
+.chat-window { height: 300px; overflow-y: auto; border: 1px solid #e5e7ea; border-radius: 10px; padding: 12px; background: #f9fafb; margin-bottom: 10px; }
+.msg-row { display: flex; margin-bottom: 8px; }
+.msg-row.user { justify-content: flex-end; }
+.msg-row.bot { justify-content: flex-start; align-items: flex-end; }
+.bot-avatar { width: 28px; height: 28px; border-radius: 50%; background: #1D9E75; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; margin-right: 8px; flex-shrink: 0; }
+.bubble { max-width: 72%; padding: 8px 12px; font-size: 13px; line-height: 1.55; }
+.bubble.user { background: #1D9E75; color: #fff; border-radius: 12px 12px 4px 12px; }
+.bubble.bot { background: #fff; color: #1a1a1a; border-radius: 12px 12px 12px 4px; border: 1px solid #e5e7ea; }
+
+/* Typing dots */
+.typing-dots { display: flex; gap: 4px; align-items: center; padding: 10px 14px; }
+.typing-dots span { width: 6px; height: 6px; border-radius: 50%; background: #1D9E75; animation: bounce 1.2s infinite; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+
+.suggested-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.suggested-btn { font-size: 11px; padding: 4px 10px; border: 1px solid #dde1e5; border-radius: 20px; background: #fff; color: #666; cursor: pointer; transition: background 0.15s; }
+.suggested-btn:hover { background: #f0f0f0; }
+.chat-input-row { display: flex; gap: 8px; }
+.chat-input { flex: 1; padding: 9px 12px; border: 1px solid #dde1e5; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.chat-input:focus { border-color: #1D9E75; }
+.send-btn { background: #1D9E75; color: #fff; border: none; border-radius: 8px; padding: 9px 18px; font-size: 14px; cursor: pointer; }
+
+/* Footer tiles */
+.footer-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tile { background: #fff; border: 1px solid #e5e7ea; border-radius: 8px; padding: 10px 12px; }
+.tile-title { font-size: 12px; font-weight: 500; color: #1a1a1a; margin-bottom: 2px; }
+.tile-sub { font-size: 11px; color: #888; }
+
+@media (max-width: 500px) {
+  .row2 { grid-template-columns: 1fr; }
+  .footer-tiles { grid-template-columns: 1fr; }
+  .tab-btn span:not(.tab-icon):not(.ai-badge) { display: none; }
+}
